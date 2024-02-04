@@ -1,0 +1,114 @@
+﻿<Page
+    x:Class="ReedTask1_1VictorianMoneyTracker.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReedTask1_1VictorianMoneyTracker"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel HorizontalAlignment="Center" Padding="20,10" MaxWidth="1000" MaxHeight="800" Background="AliceBlue">
+        <StackPanel Padding="5,20,5,20" BorderBrush="LightBlue" BorderThickness="5,5,5,2.5">
+            <TextBlock x:Name="totalWorthAmount" Text="£2 2c 1s 6d 1f" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="Total Worth" FontSize="24" HorizontalAlignment="Center"/>
+        </StackPanel>
+        
+        <!-- POUNDS -->
+        <StackPanel Orientation="Horizontal" Padding="20,10" BorderBrush="LightBlue" BorderThickness="5,2.5,5,2.5">
+            <Button Background="Transparent" x:Name="poundsDecrease" Click="AmountDecrease_Click">
+                <TextBlock Text="-" FontSize="36" FontWeight="Bold" Width="100" Padding="10" TextAlignment="Center" HorizontalTextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Width="100" x:Name="poundsConvertDown" Click="AmountConvertDown_Click">
+                <Image Source="/Assets/downArrowDisabled.png" Height="50" MaxWidth="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <StackPanel Orientation="Vertical" Width="400" VerticalAlignment="Center">
+                <TextBlock x:Name="poundsAmount" Text="2" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="poundsTitle" Text="Pounds" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <TextBlock Width="100"></TextBlock>
+            <Button Background="Transparent" x:Name="poundsIncrease" Click="AmountIncrease_Click">
+                <TextBlock Text="+" FontSize="36" FontWeight="Bold" Width="100" Padding="10" TextAlignment="Center" HorizontalTextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+        </StackPanel>
+
+        <!-- CROWNS -->
+        <StackPanel Orientation="Horizontal" Padding="20,10" BorderBrush="LightBlue" BorderThickness="5,2.5,5,2.5">
+            <Button Background="Transparent" x:Name="crownsDecrease" Click="AmountDecrease_Click">
+                <TextBlock Text="-" FontSize="36" FontWeight="Bold" Width="100" Padding="10" TextAlignment="Center" HorizontalTextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Width="100" x:Name="crownsConvertDown" Click="AmountConvertDown_Click">
+                <Image Source="/Assets/downArrowDisabled.png" Height="50" MaxWidth="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <StackPanel Orientation="Vertical" Width="400" VerticalAlignment="Center">
+                <TextBlock x:Name="crownsAmount" Text="2" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="crownsTitle" Text="Crowns" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Button Width="100" x:Name="crownsConvertUp" Click="AmountConvertUp_Click">
+                <Image Source="/Assets/upArrowDisabled.png" Height="50" MaxWidth="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+            <Button Background="Transparent" x:Name="crownsIncrease" Click="AmountIncrease_Click">
+                <TextBlock Text="+" FontSize="36" FontWeight="Bold" Width="100" Padding="10" TextAlignment="Center" HorizontalTextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+        </StackPanel>
+
+        <!-- SHILLINGS -->
+        <StackPanel Orientation="Horizontal" Padding="20,10" BorderBrush="LightBlue" BorderThickness="5,2.5,5,2.5">
+            <Button Background="Transparent" x:Name="shillingsDecrease" Click="AmountDecrease_Click">
+                <TextBlock Text="-" FontSize="36" FontWeight="Bold" Width="100" Padding="10" TextAlignment="Center" HorizontalTextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Width="100" x:Name="shillingsConvertDown" Click="AmountConvertDown_Click">
+                <Image Source="/Assets/downArrowDisabled.png" Height="50" MaxWidth="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <StackPanel Orientation="Vertical" Width="400" VerticalAlignment="Center">
+                <TextBlock x:Name="shillingsAmount" Text="1" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="shillingsTitle" Text="Shillings" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Button Width="100" x:Name="shillingsConvertUp" Click="AmountConvertUp_Click">
+                <Image Source="/Assets/upArrowDisabled.png" Height="50" MaxWidth="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+            <Button Background="Transparent" x:Name="shillingsIncrease" Click="AmountIncrease_Click">
+                <TextBlock Text="+" FontSize="36" FontWeight="Bold" Width="100" Padding="10" TextAlignment="Center" HorizontalTextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+        </StackPanel>
+
+        <!-- PENCE -->
+        <StackPanel Orientation="Horizontal" Padding="20,10" BorderBrush="LightBlue" BorderThickness="5,2.5,5,2.5">
+            <Button Background="Transparent" x:Name="penceDecrease" Click="AmountDecrease_Click">
+                <TextBlock Text="-" FontSize="36" FontWeight="Bold" Width="100" Padding="10" TextAlignment="Center" HorizontalTextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button Width="100" x:Name="penceConvertDown" Click="AmountConvertDown_Click">
+                <Image Source="/Assets/downArrowDisabled.png" Height="50" MaxWidth="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <StackPanel Orientation="Vertical" Width="400" VerticalAlignment="Center">
+                <TextBlock x:Name="penceAmount" Text="6" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="penceTitle" Text="Pence" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Button Width="100" x:Name="penceConvertUp" Click="AmountConvertUp_Click">
+                <Image Source="/Assets/upArrowDisabled.png" Height="50" MaxWidth="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+            <Button Background="Transparent" x:Name="penceIncrease" Click="AmountIncrease_Click">
+                <TextBlock Text="+" FontSize="36" FontWeight="Bold" Width="100" Padding="10" TextAlignment="Center" HorizontalTextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+        </StackPanel>
+
+        <!-- FARTHINGS -->
+        <StackPanel Orientation="Horizontal" Padding="20,10" BorderBrush="LightBlue" BorderThickness="5,2.5,5,5">
+            <Button Background="Transparent" x:Name="farthingsDecrease" Click="AmountDecrease_Click">
+                <TextBlock Text="-" FontSize="36" FontWeight="Bold" Width="100" Padding="10" TextAlignment="Center" HorizontalTextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <TextBlock Width="100"></TextBlock>
+            <StackPanel Orientation="Vertical" Width="400" VerticalAlignment="Center">
+                <TextBlock x:Name="farthingsAmount" Text="1" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock x:Name="farthingsTitle" Text="Farthings" FontSize="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Button Width="100" x:Name="farthingsConvertUp" Click="AmountConvertUp_Click">
+                <Image Source="/Assets/upArrowDisabled.png" Height="50" MaxWidth="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+            <Button Background="Transparent" x:Name="farthingsIncrease" Click="AmountIncrease_Click">
+                <TextBlock Text="+" FontSize="36" FontWeight="Bold" Width="100" Padding="10" TextAlignment="Center" HorizontalTextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+        </StackPanel>
+
+    </StackPanel>
+</Page>
